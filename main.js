@@ -28,3 +28,7 @@ class WeatherChatBot{
 		request.end();
 	};
 };
+
+var access_token = require("./config.js");
+var weather = new WeatherChatBot(access_token.CLIENT_ACCESS_TOKEN, access_token.UNIQUE_SESSION_ID)
+weather.weatherInquiry();
